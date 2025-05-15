@@ -75,13 +75,6 @@ It includes data preprocessing, model training, and a web interface for uploadin
 | Mức Phụ cấp           | 0.017186                 |
 | Loại hợp đồng         | 0.016623                 |
 
-## Web Interface
-
-An HTML interface will be provided to:
-
-1.  Upload an Excel file (similar format to the original, but without the "Đang làm việc" column).
-2.  Run the prediction model on the uploaded data.
-3.  Display the attrition predictions.
 
 ## Model Comparison Results (Default Parameters)
 
@@ -183,3 +176,4 @@ An HTML interface (`index.html`) is provided via a Flask application (`app.py`):
     ```
     Access the application in your browser, typically at `http://127.0.0.1:5000/`.
     To allow access from other machines on your local network, run: `python app.py --host=0.0.0.0` (ensure your firewall allows connections to port 5000).
+
