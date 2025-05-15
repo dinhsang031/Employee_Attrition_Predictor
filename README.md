@@ -85,6 +85,27 @@ An HTML interface will be provided to:
 
 ## Model Comparison Results (Default Parameters)
 
+### **Best Model**: Random Forest
+
+-   Accuracy: 0.8966
+-   Confusion Matrix:
+
+    |   | T   | F   |
+    |---|-----|-----|
+    | T | 550 | 54  |
+    | F | 126 | 1011|
+
+**Classification Report:**
+
+|           | precision | recall | f1-score | support |
+|-----------|-----------|--------|----------|---------|
+| 0         | 0.81      | 0.91   | 0.86     | 604     |
+| 1         | 0.95      | 0.89   | 0.92     | 1137    |
+| accuracy  |           |        | 0.90     | 1741    |
+| macro avg | 0.88      | 0.90   | 0.89     | 1741    |
+| weighted avg| 0.90      | 0.90   | 0.90     | 1741    |
+
+
 ### Model: Logistic Regression
 
 -   Accuracy: 0.8208
@@ -105,25 +126,6 @@ An HTML interface will be provided to:
 | macro avg | 0.80      | 0.82   | 0.81     | 1741    |
 | weighted avg| 0.83      | 0.82   | 0.82     | 1741    |
 
-### Best Model: Random Forest
-
--   Accuracy: 0.8966
--   Confusion Matrix:
-
-    |   | T   | F   |
-    |---|-----|-----|
-    | T | 550 | 54  |
-    | F | 126 | 1011|
-
-**Classification Report:**
-
-|           | precision | recall | f1-score | support |
-|-----------|-----------|--------|----------|---------|
-| 0         | 0.81      | 0.91   | 0.86     | 604     |
-| 1         | 0.95      | 0.89   | 0.92     | 1137    |
-| accuracy  |           |        | 0.90     | 1741    |
-| macro avg | 0.88      | 0.90   | 0.89     | 1741    |
-| weighted avg| 0.90      | 0.90   | 0.90     | 1741    |
 
 ### Model: Gradient Boosting
 
