@@ -66,7 +66,7 @@ It includes data preprocessing, model training, and a web interface for uploadin
 |-----------------------|--------------------------|
 | Chức danh             | 0.108584                 |
 | Ngày bắt đầu HĐ_Month | 0.049523                 |
-| Ngày bắt đầu HĐ_Day   | 0.049311                 |
+| Số tháng review gần   | 0.049311                 |
 | Địa Điểm Làm Việc     | 0.045597                 |
 | Tổng Mức Lương        | 0.034394                 |
 | Ngày bắt đầu HĐ_Year  | 0.029116                 |
