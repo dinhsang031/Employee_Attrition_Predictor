@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Uploads and Downloads folders for the Flask app (temporary files)
+uploads/*
+!uploads/.gitkeep
+downloads/*
+!downloads/.gitkeep
+
+# If you use virtual environments within the project folder:
+# venv/
+# env/
+# .venv/
+# .env

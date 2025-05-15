@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Employee Attrition Predictor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+        }
+        .table-responsive {
+            margin-top: 2rem;
+        }
+        .alert {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4 text-center">Employee Attrition Predictor</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category if category else 'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="post" enctype="multipart/form-data" class="mb-4">
+            <div class="form-group">
+                <label for="file">Upload Excel File ('.xlsx') for Prediction:</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="file" id="file" required>
+                    <label class="custom-file-label" for="file">Choose file...</label>
+                </div>
+                <small class="form-text text-muted">
+                    The Excel file should have a similar format to the training data, but without the 'Đang làm việc' column.
+                </small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Upload and Predict</button>
+        </form>
+
+        {% if filename %}
+            <p class="text-center">Uploaded file: <strong>{{ filename }}</strong></p>
+        {% endif %}
+
+        {% if predictions_html %}
+            <h4 class="mt-5 text-center">Prediction Results:</h4>
+            <div class="table-responsive">
+                {{ predictions_html | safe }}
+            </div>
+            {% if download_filename %}
+            <div class="text-center mt-3">
+                <a href="{{ url_for('download_file', filename=download_filename) }}" class="btn btn-success">Download Results as Excel</a>
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Show filename in custom file input
+        $('.custom-file-input').on('change', function(event) {
+            var inputFile = event.target;
+            var fileName = inputFile.files[0].name;
+            $(inputFile).next('.custom-file-label').html(fileName);
+        });
+    </script>
+</body>
+</html>

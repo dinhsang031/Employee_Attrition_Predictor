@@ -1,0 +1,41 @@
+=== Model Comparison Report (Default Parameters) ===
+
+--- Model: Logistic Regression ---
+Test Set Accuracy: 0.8208
+Test Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.70      0.83      0.76       604
+           1       0.90      0.81      0.86      1137
+
+    accuracy                           0.82      1741
+   macro avg       0.80      0.82      0.81      1741
+weighted avg       0.83      0.82      0.82      1741
+
+
+--- Model: Random Forest ---
+Test Set Accuracy: 0.8966
+Test Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.81      0.91      0.86       604
+           1       0.95      0.89      0.92      1137
+
+    accuracy                           0.90      1741
+   macro avg       0.88      0.90      0.89      1741
+weighted avg       0.90      0.90      0.90      1741
+
+
+--- Model: Gradient Boosting ---
+Test Set Accuracy: 0.8817
+Test Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.81      0.86      0.83       604
+           1       0.92      0.89      0.91      1137
+
+    accuracy                           0.88      1741
+   macro avg       0.87      0.88      0.87      1741
+weighted avg       0.88      0.88      0.88      1741
+
+
