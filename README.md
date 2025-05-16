@@ -6,6 +6,7 @@ It includes data preprocessing, model training, and a web interface for uploadin
 ## Project Structure
 
 - `data/`: To store datasets. The primary dataset (`Danh sách nhân sự.xlsx`) is expected here for `train_model.py`.
+- `notebook/`: To present what methodology overview
 - `src/`: Source code for the project.
   - `preprocessing.py`: Script for data loading, cleaning, feature engineering, and preprocessing.
   - `train_model.py`: Script for training models, evaluating them, performing SHAP analysis, and saving the best model and reports.
