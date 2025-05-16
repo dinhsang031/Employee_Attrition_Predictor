@@ -71,10 +71,7 @@ It includes data preprocessing, model training, and a web interface for uploadin
 
 # Model Comparison Report
 
-
-## Model Comparison Results (Default Parameters)
-
-### **Best Model**: Random Forest
+## **Best Model**: Random Forest
 
 -   Accuracy: 0.8966
 -   Confusion Matrix:
@@ -95,7 +92,7 @@ It includes data preprocessing, model training, and a web interface for uploadin
 | weighted avg| 0.90      | 0.90   | 0.90     | 1741    |
 
 
-### Model: Logistic Regression
+## Model: Logistic Regression
 
 -   Accuracy: 0.8208
 -   Confusion Matrix:
@@ -116,7 +113,7 @@ It includes data preprocessing, model training, and a web interface for uploadin
 | weighted avg| 0.83      | 0.82   | 0.82     | 1741    |
 
 
-### Model: Gradient Boosting
+## Model: Gradient Boosting
 
 -   Accuracy: 0.8817
 -   Confusion Matrix:
