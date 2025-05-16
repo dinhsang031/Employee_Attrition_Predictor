@@ -46,12 +46,6 @@ It includes data preprocessing, model training, and a web interface for uploadin
 10. **Artifact Saving:** The best model, preprocessor objects (including scalers, encoders, target mean maps, selected feature list), and evaluation reports are saved.
 
 ## Dataset Insights
-- The original dataset (`Danh sách nhân sự.xlsx`) contains **8,702 records** and **43 columns**.
-- After preprocessing and feature selection (Top 20 features based on SHAP), the models are trained on these **20 features**.
-
-# Model Comparison Report
-
-## Dataset and Data Processing
 
 * The primary dataset used is "Danh sách nhân sự.xlsx".
 * The target variable is derived from the "Đang làm việc" column (1 for currently working, blank for has left).
@@ -74,6 +68,8 @@ It includes data preprocessing, model training, and a web interface for uploadin
 | Mức thưởng KPI hoặc Khoán | 0.022094                 |
 | Mức Phụ cấp           | 0.017186                 |
 | Loại hợp đồng         | 0.016623                 |
+
+# Model Comparison Report
 
 
 ## Model Comparison Results (Default Parameters)
